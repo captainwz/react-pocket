@@ -1,6 +1,6 @@
 {
   "name": "redollar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A react developing pattern within querying ability",
   "main": "./lib/redollar/index.js",
   "bin": {
