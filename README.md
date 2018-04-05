@@ -1,4 +1,4 @@
-## Redollar
+## Redollar 
 [![npm version](https://img.shields.io/npm/v/redollar.svg?style=flat-square)](https://www.npmjs.com/package/redollar)
 
 A totally new pattern that enables you to use intimate querying apis in React.
@@ -103,8 +103,18 @@ export default class Counter extends $ {
 ```
 You can get the full example [here](https://github.com/captainwz/redollar/tree/master/example/src).
 
-### Get Start
-**Redollar is just on its experimental stage** so that current procedure may be a 
+### Usage
+**Redollar is just on its experimental stage** so current procedure may be that concise.
+
+1. Write your app in **Redollar Pattern**. Here are some constraints you should notice. In order to follow them readily, just take a look at the [example](https://github.com/captainwz/redollar/tree/master/example/src) as well.
+> * Your root component's class must extend $.
+> * Any component's class whose instance you want to use with $ as ```$('OneComponent')``` later must extend $.
+> * You can declare component's props by declaring class method ```defaultProp``` which should return an object.
+> * If you pass a prop in jsx element declaration eg ```<Card  foo="bar" />```, it'll be a permenant assignment and you are not able to change it by ```$('OneComponent').setProp({foo: 'tux'})```. It is a rational policy.
+> * You can't contain any element herits from $ in A standard React component's class declaration. 
+> * Make sure your entry file is in the top direcotry.
+
+
 
 
 
