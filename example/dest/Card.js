@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import $ from "../../lib/redollar/index.js";
+import $ from "redollar";
 import Timer from "./Timer";
 import Decoration from "./Decoration";
 

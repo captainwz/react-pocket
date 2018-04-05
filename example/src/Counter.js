@@ -1,4 +1,4 @@
-// import {$} from 'requery';
+import {$} from 'redollar';
 
 export default class Counter extends $ {
     

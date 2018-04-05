@@ -1,4 +1,4 @@
-// import {$} from 'requery';
+import {$} from 'redollar';
 import Counter from './Counter';
 
 export default class Timer extends $ {
