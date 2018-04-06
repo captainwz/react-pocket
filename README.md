@@ -106,7 +106,7 @@ You can get the full example [here](https://github.com/captainwz/redollar/tree/m
 ### Usage
 **Redollar is just on its experimental stage** so current procedure may not be that concise.
 
-1. Write your app in **Redollar Pattern**. Here are some constraints you should notice. In order to follow them readily, just take a look at the [example](https://github.com/captainwz/redollar/tree/master/example/src) as well.
+1.Write your app in **Redollar Pattern**. Here are some constraints you should notice. In order to follow them readily, just take a look at the [example](https://github.com/captainwz/redollar/tree/master/example/src) as well.
 > * Your root component's class must extend $.
 > * Any component's class whose instance you want to use with $ as ```$('OneComponent')``` later must extend $.
 > * You can declare component's props by declaring class method ```defaultProp``` which should return an object.
@@ -116,14 +116,14 @@ You can get the full example [here](https://github.com/captainwz/redollar/tree/m
 > * Please use ```export default``` instead of  ```module.exports``` to export your class.
 
 
-2. Then use **Redollar CLI** to transform the codes. You may use
+2.Then use **Redollar CLI** to transform the codes. You may use
 ```
 ./node_modules/.bin/redollar --entry path/to/your/entry/file --output path/to/a/target/directory
 ```
 This command will scan all your codes and make some necessray modifications, copying all files in the direcotry where your entry file is recursively to the target direcotry. **Still, the outputs are written in ES6 and JSX syntax, not much different from your source codes but a few essential parts.**
 
 
-3. Do whatever you want to do tackle the outputs like webpack or gulp just to run your app! Good Luck!🎉
+3.Do whatever you want to do tackle the outputs like webpack or gulp just to run your app! Good Luck!🎉
 
 
 
