@@ -10,7 +10,6 @@ export default class Card extends $ {
 
             let num = parseInt($('Counter').getProp('num')) + 2;
             $('Counter').setProp({num});
-
             $(this).setProp({
                 backgroundColor: `rgb(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)})`
             })

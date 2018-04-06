@@ -101,7 +101,11 @@ export default class Counter extends $ {
 
 }
 ```
-You can get the full example [here](https://github.com/captainwz/redollar/tree/master/example/src).
+
+You can get [the full example here](https://github.com/captainwz/redollar/tree/master/example/src).
+
+![gif](https://raw.githubusercontent.com/captainwz/redollar/master/example/example.gif)
+
 
 ### Usage
 **Redollar is just on its experimental stage** so current procedure may not be that concise.
@@ -138,7 +142,7 @@ Redollar tries to make its APIs resemble those of jquery. More APIs are being de
 ```js
 $(specifier)
 ```
-Initialize the instance. The expecting param could be the name of a class or you can just pass a ```this``` in your class declaration (see the [example](https://github.com/captainwz/redollar/blob/master/example/src/Card.js#L14)).
+Initialize the instance. The expecting param could be the name of a class or you can just pass a ```this``` in your class declaration (see the [example](https://github.com/captainwz/redollar/blob/master/example/src/Card.js#L13)).
 
 * ```specifier```: ```String|Object``` (required) 
 
