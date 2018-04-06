@@ -120,6 +120,11 @@ You can get the full example [here](https://github.com/captainwz/redollar/tree/m
 ```
 ./node_modules/.bin/redollar --entry path/to/your/entry/file --output path/to/a/target/directory
 ```
+**Also, you can just monitor file changes just by adding ```--watch```**
+```
+./node_modules/.bin/redollar --entry path/to/your/entry/file --output path/to/a/target/directory --watch
+```
+
 This command will scan all your codes and make some necessray modifications, copying all files in the direcotry where your entry file is recursively to the target direcotry. **Still, the outputs are written in ES6 and JSX syntax, not much different from your source codes but a few essential parts.**
 
 
@@ -150,6 +155,15 @@ Get the right instance by the given index if there are a few.
 ---
 
 ```js
+$(specifier).getProp()
+```
+Get value of the property by a name. If it is not given, all properties should return.
+
+* ```name```: ```String``` (optional)
+
+---
+
+```js
 $(specifier).setProp(props)
 ```
 Set properties.
@@ -159,11 +173,11 @@ Set properties.
 ---
 
 ```js
-$(specifier).getProp(name)
+$(specifier).getState(name)
 ```
-Get value of the property by a name.
+Get value of the state by a name. If it is not given, all states should return.
 
-* ```name```: ```String``` (required)
+* ```name```: ```String``` (optional)
 
 ---
 

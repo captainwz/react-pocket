@@ -1,4 +1,5 @@
-import React, { Component } from "react"; // import {$} from 'requery';
+import React, { Component } from "react";
+import { $ } from "redollar";
 import Counter from "./Counter";
 
 export default class Timer extends Component {

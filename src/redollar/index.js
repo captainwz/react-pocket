@@ -52,8 +52,7 @@ class $class {
     constructor (specifier) {
 
         this.objArr = getObjArr(specifier);
-        this.cursorIndex = undefined;
-    
+        this.length = this.objArr.length;
     }
 
     setProp (prop) {
@@ -74,13 +73,11 @@ class $class {
 
         global.$obj.wrappedRef.setState(global.$obj);
 
+        return this;
+
     }
 
     getProp (name) {
-
-        if (typeof name != 'string') {
-            throw new Error('Call getProp with wrong argument of type:' + (typeof name))
-        }
 
         if (!this.objArr || !this.objArr.length) {
             throw new Error('Can\'t get prop from an empty instance')
@@ -90,7 +87,67 @@ class $class {
             console.warn('There are more than one instances, only read the property from the first one');
         }
 
-        return this.objArr[0].props[name];
+        if (this.objArr[0].ref) {
+
+            if (typeof name == 'string') {
+
+                return this.objArr[0].ref.props[name];
+                
+            } else {
+
+                return this.objArr[0].ref.props
+
+            }
+
+        } else if (this.objArr[0].props) {
+
+            if (typeof name == 'string') {
+
+                return this.objArr[0].props[name];
+                
+            } else {
+
+                return this.objArr[0].props
+
+            }
+
+        } else {
+
+            throw new Error('Can\'t call getProp because failed to get props');
+
+        }
+
+
+    }
+
+    getState (name) {
+
+        if (!this.objArr || !this.objArr.length) {
+            throw new Error('Can\'t get prop from an empty instance')
+        }
+
+        if (this.objArr.length > 1) {
+            console.warn('There are more than one instances, only read the property from the first one');
+        }
+
+        if (this.objArr[0].ref) {
+
+            if (typeof name == 'string') {
+
+                return this.objArr[0].ref.state[name];
+                
+            } else {
+
+                return this.objArr[0].ref.state
+
+            }
+
+        } else {
+
+            throw new Error('Can\'t call getState because react instance reference is missing');
+
+        }
+
 
     }
 
@@ -111,10 +168,36 @@ class $class {
         }
 
         this.objArr = [obj];
+        this.length = 1;
 
         return this;
 
     }
+
+    /* Deprecated
+    setState (state) {
+
+        if (typeof prop != 'object') {
+            throw new Error('Call setState with wrong argument of type:' + (typeof prop))
+        }
+
+        this.objArr.forEach(obj => {
+
+            if (!obj.ref) {
+
+                throw new Error('Can\'t call setSate because react instance reference is undefined');
+
+            } else {
+
+                obj.ref.setState(Object.assign(Object.create(null), state));
+
+            }
+
+        })
+
+        return this;
+
+    }*/
 
 }
 

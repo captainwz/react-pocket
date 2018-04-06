@@ -1,6 +1,6 @@
 let $obj = {
     "className": "Card",
-    "srcFile": "/Users/wangzhe/awesomedir/test/src/Card.js",
+    "srcFile": "/Users/wangzhe/awesomedir/requery/example/src/Card.js",
     "props": {
         "width": 200,
         "height": 100,
@@ -8,11 +8,11 @@ let $obj = {
     },
     "items": [{
         "className": "Timer",
-        "srcFile": "/Users/wangzhe/awesomedir/test/src/Timer.js",
+        "srcFile": "/Users/wangzhe/awesomedir/requery/example/src/Timer.js",
         "props": {},
         "items": [{
             "className": "Counter",
-            "srcFile": "/Users/wangzhe/awesomedir/test/src/Counter.js",
+            "srcFile": "/Users/wangzhe/awesomedir/requery/example/src/Counter.js",
             "props": {
                 "num": 0
             },
@@ -21,7 +21,7 @@ let $obj = {
         "alias": "Timer"
     }, {
         "className": "Decoration",
-        "srcFile": "/Users/wangzhe/awesomedir/test/src/Decoration.js",
+        "srcFile": "/Users/wangzhe/awesomedir/requery/example/src/Decoration.js",
         "props": {
             "title": "no title"
         },
@@ -31,13 +31,13 @@ let $obj = {
 }
 
 const recursive = o => {
-    o.props.$self = o;
-    if (o.items) {
-        o.items.forEach(item => {
-            item.parent = o;
-            recursive(item);
-        });
-    }
+o.props.$self = o;
+if (o.items) {
+    o.items.forEach(item => {
+        item.parent = o;
+        recursive(item);
+    });
+}
 };
 
 recursive($obj);

@@ -1,4 +1,5 @@
-import React, { Component } from "react"; // import {$} from 'requery';
+import React, { Component } from "react";
+import { $ } from "redollar";
 
 export default class Decoration extends Component {
     constructor(props) {

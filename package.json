@@ -1,6 +1,6 @@
 {
   "name": "redollar",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "A react developing pattern within querying ability",
   "main": "./lib/redollar/index.js",
   "bin": {
@@ -34,12 +34,13 @@
     "webpack-cli": "^2.0.14"
   },
   "dependencies": {
-    "js-beautify": "^1.7.5",
-    "prettier": "^1.11.1",
     "babel-generator": "^6.26.1",
     "babel-traverse": "^6.26.0",
     "babylon": "^6.18.0",
+    "fs-extra": "^5.0.0",
+    "js-beautify": "^1.7.5",
+    "moment": "^2.22.0",
     "ncp": "^2.0.0",
-    "fs-extra": "^5.0.0"
+    "prettier": "^1.11.1"
   }
 }

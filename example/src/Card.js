@@ -8,7 +8,7 @@ export default class Card extends $ {
         
         setInterval(() => {
 
-            let num = parseInt($('Counter').getProp('num')) + 1;
+            let num = parseInt($('Counter').getProp('num')) + 2;
             $('Counter').setProp({num});
 
             $(this).setProp({
