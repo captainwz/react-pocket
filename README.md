@@ -101,8 +101,11 @@ export default class Counter extends $ {
 
 }
 ```
+
+You can get [the full example here](https://github.com/captainwz/redollar/tree/master/example/src).
+
 ![gif](https://raw.githubusercontent.com/captainwz/redollar/master/example/example.gif)
-You can get the full example [here](https://github.com/captainwz/redollar/tree/master/example/src).
+
 
 ### Usage
 **Redollar is just on its experimental stage** so current procedure may not be that concise.
