@@ -37,7 +37,7 @@ export default class Card extends $ {
 
         setInterval(() => {
             
-            let num = parseInt($('Counter'.getPro('num')) + 1;
+            let num = parseInt($('Counter').getPro('num')) + 1;
 
             $('Counter').setProp({num});
 
@@ -109,8 +109,8 @@ You can get the full example [here](https://github.com/captainwz/redollar/tree/m
 1.Write your app in **Redollar Pattern**. Here are some constraints you should notice. In order to follow them readily, just take a look at the [example](https://github.com/captainwz/redollar/tree/master/example/src) as well.
 > * Your root component's class must extend $.
 > * Any component's class whose instance you want to use with $ as ```$('OneComponent')``` later must extend $.
-> * You can declare component's props by declaring class method ```defaultProp``` which should return an object.
-> * If you pass a prop in jsx element declaration eg ```<OneComponent  foo="bar" />```, it'll be a permenant assignment and you are not able to change it by ```$('OneComponent').setProp({foo: 'tux'})```. It is a rational strategy.
+> * You can declare component's properties by declaring class method ```defaultProp``` which should return an object.
+> * If you pass a property in jsx element declaration eg ```<OneComponent  foo="bar" />```, it'll be a permenant assignment and you are not able to change it by ```$('OneComponent').setProp({foo: 'tux'})```. It is a rational strategy.
 > * You can't contain any element herits from $ in a standard React component's class declaration. 
 > * Make sure your entry file is in the top direcotry.
 > * Please use ```export default``` instead of  ```module.exports``` to export your class.
@@ -124,6 +124,48 @@ This command will scan all your codes and make some necessray modifications, cop
 
 
 3.Do whatever you want to do tackle the outputs like webpack or gulp just to run your app! Good Luck!🎉
+
+### API
+Redollar tries to make its APIs resemble those of jquery. More APIs are under developing. Here are some available now.
+
+---
+
+```js
+$(specifier)
+```
+Initialize the instance
+
+* ```specifier```: ```String|Object``` (required) It could be the name of a class or you can just pass a ```this``` in your class declaration (see the [example](https://github.com/captainwz/redollar/blob/master/example/src/Card.js#L14)).
+
+---
+
+```js
+$(specifier).get(index)
+```
+
+Get the right instance by the given index if there are a few.
+
+* ```index```: ```Number``` (required) 
+
+---
+
+```js
+$(specifier).setProp(props)
+```
+Set properties.
+
+* ```props```: ```Object``` (required) 
+
+---
+
+```js
+$(specifier).getProp(name)
+```
+Get value of the property by a name.
+
+* ```name```: ```String``` (required)
+
+---
 
 
 
