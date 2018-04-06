@@ -167,6 +167,10 @@ Get value of the property by a name.
 
 ---
 
+### Lisence
+
+MIT
+
 
 
 
