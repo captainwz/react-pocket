@@ -101,6 +101,7 @@ export default class Counter extends $ {
 
 }
 ```
+![gif](https://raw.githubusercontent.com/captainwz/redollar/master/example/example.gif)
 You can get the full example [here](https://github.com/captainwz/redollar/tree/master/example/src).
 
 ### Usage
