@@ -131,7 +131,7 @@ This command will scan all your codes and make some necessray modifications, cop
 3.Do whatever you want to do tackle the outputs like webpack or gulp just to run your app! Good Luck!🎉
 
 ### API
-Redollar tries to make its APIs resemble those of jquery. More APIs are under developing. Here are some available now.
+Redollar tries to make its APIs resemble those of jquery. More APIs are being developed. Here are some available now.
 
 ---
 
@@ -155,7 +155,7 @@ Get the right instance by the given index if there are a few.
 ---
 
 ```js
-$(specifier).getProp()
+$(specifier).getProp(name)
 ```
 Get value of the property by a name. If it is not given, all properties should return.
 
