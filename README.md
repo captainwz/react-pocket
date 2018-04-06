@@ -133,9 +133,9 @@ Redollar tries to make its APIs resemble those of jquery. More APIs are under de
 ```js
 $(specifier)
 ```
-Initialize the instance
+Initialize the instance. The expecting param could be the name of a class or you can just pass a ```this``` in your class declaration (see the [example](https://github.com/captainwz/redollar/blob/master/example/src/Card.js#L14)).
 
-* ```specifier```: ```String|Object``` (required) It could be the name of a class or you can just pass a ```this``` in your class declaration (see the [example](https://github.com/captainwz/redollar/blob/master/example/src/Card.js#L14)).
+* ```specifier```: ```String|Object``` (required) 
 
 ---
 
