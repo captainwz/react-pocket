@@ -1,7 +1,7 @@
 ## Redollar 
 [![npm version](https://img.shields.io/npm/v/redollar.svg?style=flat-square)](https://www.npmjs.com/package/redollar)
 
-A totally new pattern that enables you to use intimate querying APIs in React. Just write codes like ```$('MyComponent').setProp({foo: 'bar'})``` in anywhere.
+A totally new pattern that enables you to use intimate querying APIs in React. Just write codes like ```$('MyComponent').setProp({foo: 'bar'})``` anywhere.
 
 ### Abstract
 There are two types of developers. You probably are new to React, fascinated by this state-oriented mode before becoming confused about something. **Data interaction is an issue between components**, especially for those written in different files. That's the moment when you have to embark on a treck of deeper learning and finally get beaten by myriad concepts: redux, reducer, action, dispatch, blah...
