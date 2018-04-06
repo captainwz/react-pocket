@@ -1,7 +1,7 @@
 ## Redollar 
 [![npm version](https://img.shields.io/npm/v/redollar.svg?style=flat-square)](https://www.npmjs.com/package/redollar)
 
-A totally new pattern that enables you to use intimate querying apis in React.
+A totally new pattern that enables you to use intimate querying APIs in React. Just write codes like ```$('MyComponent').setProp({foo: 'bar'})``` in anywhere.
 
 ### Abstract
 There are two types of developers. You probably are new to React, fascinated by this state-oriented mode before becoming confused about something. **Data interaction is an issue between components**, especially for those written in different files. That's the moment when you have to embark on a treck of deeper learning and finally get beaten by myriad concepts: redux, reducer, action, dispatch, blah...
@@ -24,14 +24,14 @@ Let's take an example. There are three component files ```Card.js```,```Timer.js
           |
            -- Counter
 ```
-What if you want to change the number of Counter just in ```Card.js```. **Redollar offers your ability to do so!**Here are the code examples.
+**What if you want to change the number of Counter just in ```Card.js```. Redollar offers you ability to do so!** Here are the code examples.
 ```jsx
 /*Card.js*/
 
 import $ from 'redollar';
 import Timer from './Timer';
 
-export class Card extends $ {
+export default class Card extends $ {
 
     componentDidMount () {
 
@@ -55,7 +55,7 @@ export class Card extends $ {
 ```
 
 ```jsx
-/**Timer.js**/
+/*Timer.js*/
 
 import $ from 'redollar';
 import Counter from './Counter';
@@ -71,7 +71,7 @@ export default class Timer extends $ {
 ```
 
 ```jsx
-/**Counter.js**/
+/*Counter.js*/
 
 import $ from 'redollar';
 export default class Counter extends $ {
@@ -110,9 +110,20 @@ You can get the full example [here](https://github.com/captainwz/redollar/tree/m
 > * Your root component's class must extend $.
 > * Any component's class whose instance you want to use with $ as ```$('OneComponent')``` later must extend $.
 > * You can declare component's props by declaring class method ```defaultProp``` which should return an object.
-> * If you pass a prop in jsx element declaration eg ```<Card  foo="bar" />```, it'll be a permenant assignment and you are not able to change it by ```$('OneComponent').setProp({foo: 'tux'})```. It is a rational policy.
+> * If you pass a prop in jsx element declaration eg ```<OneComponent  foo="bar" />```, it'll be a permenant assignment and you are not able to change it by ```$('OneComponent').setProp({foo: 'tux'})```. It is a rational strategy.
 > * You can't contain any element herits from $ in a standard React component's class declaration. 
 > * Make sure your entry file is in the top direcotry.
+> * Please use ```export default``` instead of  ```module.exports``` to export your class.
+
+
+2. Then use **Redollar CLI** to transform the codes. You may use
+```
+./node_modules/.bin/redollar --entry path/to/your/entry/file --output path/to/a/target/directory
+```
+This command will scan all your codes and make some necessray modifications, copying all files in the direcotry where your entry file is recursively to the target direcotry. **Still, the outputs are written in ES6 and JSX syntax, not much different from your source codes but a few essential parts.**
+
+
+3. Do whatever you want to do tackle the outputs like webpack or gulp just to run your app! Good Luck!🎉
 
 
 
