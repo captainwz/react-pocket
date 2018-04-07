@@ -1,5 +1,5 @@
 ## react-pocket 
-![logo](https://raw.githubusercontent.com/captainwz/react-pocket/master/doc/logo.png)
+![logo](https://raw.githubusercontent.com/captainwz/react-pocket/master/doc/logo.png =190*190)
 
 
 [![npm version](https://img.shields.io/npm/v/react-pocket.svg?style=flat-square)](https://www.npmjs.com/package/react-pocket)
