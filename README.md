@@ -1,7 +1,7 @@
 ## react-pocket 
 [![npm version](https://img.shields.io/npm/v/react-pocket.svg?style=flat-square)](https://www.npmjs.com/package/react-pocket)
 
-A framework that enables you to use intimate jquery-style APIs in React to manage state instead of using redux. Just write codes like ```$('MyComponent').setProp({foo: 'bar'})``` anywhere. Light, simple and easy.
+**A framework that help you do state-management in React without redux or mobx. Light, simple and easy. Just write some intimate jquery-style codes like `$('MyComponent').setProp({foo: 'bar'})` anywhere. That's enough!**
 
 ### Abstract
 There are two types of developers. You probably are new to React, fascinated by this state-oriented mode before becoming confused about something. **Data interaction is an issue between components**, especially for those written in different files. That's the moment when you have to embark on a treck of deeper learning and finally get beaten by myriad concepts: redux, reducer, action, dispatch, blah...
