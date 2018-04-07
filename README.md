@@ -185,7 +185,7 @@ Get value of the state by a name. If it is not given, all states should return.
 
 ---
 
-### Lisence
+### License
 
 MIT
 
