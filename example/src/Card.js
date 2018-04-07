@@ -1,4 +1,4 @@
-import $ from 'redollar';
+import $ from 'react-pocket';
 import Timer from './Timer';
 import Decoration from './Decoration';
 

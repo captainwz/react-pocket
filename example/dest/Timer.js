@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { $ } from "redollar";
+import $ from "react-pocket";
 import Counter from "./Counter";
 
 export default class Timer extends Component {

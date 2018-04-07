@@ -1,17 +1,21 @@
 import React, { Component } from "react";
-import $ from "redollar";
+import $ from "react-pocket";
 import Timer from "./Timer";
 import Decoration from "./Decoration";
 
 export default class Card extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            foo: "123"
+        };
         props.$self.ref = this;
     }
 
     componentDidMount() {
         setInterval(() => {
-            let num = parseInt($("Counter").getProp("num")) + 2;
+            let num = parseInt($("Counter").getProp("num")) + 1;
             $("Counter").setProp({ num });
 
             $(this).setProp({

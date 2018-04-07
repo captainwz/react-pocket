@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { $ } from "redollar";
+import $ from "react-pocket";
 
 export default class Decoration extends Component {
     constructor(props) {

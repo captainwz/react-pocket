@@ -1,4 +1,4 @@
-import {$} from 'redollar';
+import $ from 'react-pocket';
 
 export default class Counter extends $ {
     
