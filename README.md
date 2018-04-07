@@ -1,7 +1,7 @@
 ## react-pocket 
 [![npm version](https://img.shields.io/npm/v/react-pocket.svg?style=flat-square)](https://www.npmjs.com/package/react-pocket)
 
-**A framework that help you do state-management in React without redux or mobx. Light, simple and easy. Just write some intimate jquery-style codes like `$('MyComponent').setProp({foo: 'bar'})` anywhere. That's enough!**
+**A framework that helps you do state-management in React without redux or mobx. Light, simple and easy. Just write some intimate jquery-style codes like `$('MyComponent').setProp({foo: 'bar'})` anywhere. That's enough!**
 
 
 ### Installation
