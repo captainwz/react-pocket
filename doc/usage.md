@@ -8,7 +8,6 @@
 > * If you pass a property in jsx element declaration eg ```<OneComponent  foo="bar" />```, it'll be a permenant assignment and you are not able to change it by ```$('OneComponent').setProp({foo: 'tux'})```. It is a rational strategy.
 > * You can't contain any element herits from $ in a standard React component's class declaration. 
 > * Make sure your entry file is in the top direcotry.
-> * Please use ```export default``` instead of  ```module.exports``` to export your class.
 
 
 2.Then use **react-pocket CLI** to transform the codes. You may use

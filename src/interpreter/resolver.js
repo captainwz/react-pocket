@@ -112,6 +112,25 @@ const func = (srcFile, destFile) => {
 
             }
 
+            if (t.isAssignmentExpression(p.node) &&
+                t.isMemberExpression(p.node.left) &&
+                t.isIdentifier(p.node.left.object) &&
+                p.node.left.object.name == 'module' &&
+                t.isIdentifier(p.node.left.property) &&
+                p.node.left.property.name == 'exports' &&
+                t.isIdentifier(p.node.right)
+            ) {
+
+                let className = p.node.name;
+
+                objArr.forEach(obj => {
+                    if (obj.className == className || obj.alias == className) {
+                        exportObj = obj;
+                    }
+                })
+
+            }
+
         }
 
     })
