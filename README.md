@@ -41,7 +41,7 @@ export default class Card extends $ {
 
         setInterval(() => {
             
-            let num = parseInt($('Counter').getPro('num')) + 1;
+            let num = parseInt($('Counter').getProp('num')) + 1;
 
             $('Counter').setProp({num});
 
@@ -51,7 +51,7 @@ export default class Card extends $ {
 
     return (
         <div>
-            <Time/>
+            <Timer/>
         </div>
     )
 }
@@ -89,7 +89,6 @@ export default class Counter extends $ {
         return {
             num: 0
         }
-    
     }
 
     render () {
@@ -99,10 +98,7 @@ export default class Counter extends $ {
                 {this.props.num}
             </h3>
         )
-
     }
-
-
 }
 ```
 
